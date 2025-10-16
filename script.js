@@ -12,7 +12,7 @@ async function setLanguage(lang) {
       const key = element.getAttribute('data-key');
       const originalText = element.textContent;
 
-      const response = await fetch('http://localhost:8080/translate', {
+      const response = await fetch('https://language-translation-backend-8qxh.onrender.com/translate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ text: originalText, targetLang: lang })
